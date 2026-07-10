@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Menu</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f1f1;
+        }
+
+        .menu-bar {
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        .accordion {
+            background: #333;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .accordion:hover {
+            background: #444;
+        }
+
+        .panel {
+            display: none;
+            background: white;
+            padding: 10px;
+        }
+
+        .panel a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .panel a:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="menu-bar">
+
+    <button class="accordion">Home</button>
+    <div class="panel">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="user.html">User</a>
+    </div>
+    <button class="accordion">Books</button>
+<div class="panel">
+    <a href="books.html">All Books</a>
+    <a href="#">JavaScript</a>
+    <a href="#">Java Programming</a>
+    <a href="#">Python</a>
+    <a href="#">C Programming</a>
+    <a href="#">C++</a>
+    <a href="#">HTML</a>
+    <a href="#">CSS</a>
+    <a href="#">Database Management</a>
+</div>
+
+<button class="accordion">Admin</button>
+<div class="panel">
+    <a href="admin.html">Admin Login</a>
+   
+</div>
+
+
+
+<button class="accordion">user</button>
+<div class="panel">
+    
+    <a href="login.html">User Login</a>
+
+
+    <button class="accordion">settings</button>
+    <div class="panel">
+      
+        
+    </div>
+
+</div>
+
+<script>
+const acc = document.getElementsByClassName("accordion");
+
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        const panel = this.nextElementSibling;
+
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
